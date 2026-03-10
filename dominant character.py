@@ -1,0 +1,19 @@
+import sys
+def solve():
+    input = sys.stdin.read().split()
+    if not input: return
+    
+    t = int(input[0])
+    idx = 1
+    for _ in range(t):
+        n = int(input[idx])
+        s = input[idx+1]
+        idx += 2
+        if "aa" in s: print(2)
+        elif "aba" in s or "aca" in s: print(3)
+        elif "abca" in s or "acba" in s: print(4)
+        elif "abbacca" in s or "accabba" in s: print(7)
+        else: print(-1)
+
+if __name__ == "__main__":
+    solve()

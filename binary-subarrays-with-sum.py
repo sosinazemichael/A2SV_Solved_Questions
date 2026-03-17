@@ -2,8 +2,6 @@ from typing import List
 
 class Solution:
     def numSubarraysWithSum(self, nums: List[int], goal: int) -> int:
-        # The exact sum is the difference between at most 'goal' 
-        # and at most 'goal - 1'
         return self.at_most(nums, goal) - self.at_most(nums, goal - 1)
 
     def at_most(self, nums: List[int], goal: int) -> int:
